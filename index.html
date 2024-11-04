@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYTY8FG9L9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-ZYTY8FG9L9");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <title>AI Recipe Generator</title>
+</head>
+
+<body>
+    <header></header>
+    <main class="container">
+        <h1>The AI Recipe Generator 🥘</h1>
+
+        <section>
+            <form id="recipe-form">
+                <!-- Input field for recipe instructions -->
+                <input
+                    type="text"
+                    name="enter-recipe-topic"
+                    placeholder="Enter a recipe subject"
+                    autofocus
+                    required
+                    class="instructions"
+                    id="user-instructions"
+                />
+
+                <!-- New Image Upload Field -->
+             
+
+                <!-- Dropdown for Spices (not required) -->
+                <!-- Dropdown for Spices (not required) -->
+<select id="spices" class="spices" multiple>
+    
+    <option value="turmeric">Turmeric</option>
+    <option value="cumin">Cumin</option>
+    <option value="chili powder">Chili Powder</option>
+    <option value="garam masala">Garam Masala</option>
+    <option value="coriander">Coriander</option>
+    <option value="ginger">Ginger</option>
+    <option value="tamarind">Tamarind</option>
+    <option value="nutmeg">Nutmeg</option>
+</select>
+
+
+                <!-- Dropdown for Serving Size -->
+                <select id="serving-size" class="serving-size" required>
+                    <option value="">Select Serving Size</option>
+                    <option value="1">1 Serving</option>
+                    <option value="2">2 Servings</option>
+                    <option value="4">3 Servings</option>
+                    <option value="4">4 Servings</option>
+                    <option value="4">5 Servings</option>
+                    <option value="6">6 Servings</option>
+                </select>
+
+                <input type="submit" value="Create Recipe" class="submit-button" />
+            </form>
+
+            <div class="hints">
+               
+            </div>
+
+            <!-- Error message -->
+            <div id="error-message" class="hidden error-message">
+                Please select a serving size to generate a recipe.
+            </div>
+        </section>
+
+        <section>
+            <div class="recipe hidden" id="recipe"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
